@@ -3,7 +3,7 @@ function Jumbotron() {
     return (
         <div className="bg-light text-center">
             <h1>Employee Directory</h1>
-            <h3>Click on carrots to filter by heading or use the search box to narrow your result.</h3>
+            <h4>Search for employees by first or last name, or sort alphabetically by first name!</h4>
         </div>
     )
 }

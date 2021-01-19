@@ -5,8 +5,7 @@ function Table(props) {
   <thead>
     <tr>
       <th scope="col">Image</th>
-      <th scope="col">First Name</th>
-      <th scope="col">Last Name</th>
+      <th scope="col" onClick={props.handleSubmit}>Name</th>
       <th scope="col">Phone</th>
       <th scope="col">Email</th>
       <th scope="col">DOB</th>
@@ -18,9 +17,8 @@ function Table(props) {
       {props.employeeList ? props.employeeList.map(employee=> {
           return(
             <tr>
-            <th scope="row"><img src={employee.picture.thumbnail}/></th>
-            <th scope="row">{employee.name.first}</th>            
-            <th scope="row">{employee.name.last}</th>
+            <th scope="row"><img src={employee.picture.thumbnail} alt='Employee thumbnail'/></th>
+            <th scope="row">{`${employee.name.first} ${employee.name.last}`}</th>            
             <th scope="row">{employee.phone}</th>
             <th scope="row">{employee.email}</th>
             <th scope="row">{employee.dob.date}</th>
